@@ -1,5 +1,6 @@
 import org.apache.commons.io.IOUtils;
 import java.io.IOException;
+import java.util.Arrays;
 
 public class Main {
 
@@ -9,9 +10,16 @@ public class Main {
         return result;
     }
 
+
     public static void main(String[] args) throws Exception{
         String output = (new Main()).readRawDataToString();
-        System.out.println(output);
 
+        String[] items = output.split("##");
+        for (String item : items) {
+            System.out.println(item);
+        }
     }
+
+
+
 }
